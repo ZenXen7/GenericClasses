@@ -34,6 +34,7 @@ public class Arithmetic <T1 extends Number, T2 extends Number> {
             return (T) num1;
         }
         return (T) num2;
+
     }
 
     @SuppressWarnings("unchecked")
