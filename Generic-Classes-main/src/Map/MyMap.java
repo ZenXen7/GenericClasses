@@ -3,16 +3,16 @@ package Map;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MyMap <K, V> {
-    private final List<K> keys;
-    private final List<V> values;
+public class MyMap <X, D> {
+    private final List<X> keys;
+    private final List<D> values;
 
     public MyMap() {
         keys = new ArrayList<>();
         values = new ArrayList<>();
     }
 
-    public void put(K key, V value) {
+    public void put(X key, D value) {
         int index = keys.indexOf(key);
         if (index == -1) {
             keys.add(key);
@@ -22,12 +22,12 @@ public class MyMap <K, V> {
         values.set(index, value);
     }
 
-    public V get(K key) {
+    public D get(X key) {
         int index = keys.indexOf(key);
         return index != -1 ? values.get(index) : null;
     }
 
-    public V remove(K key) {
+    public D remove(X key) {
         int index = keys.indexOf(key);
         if (index == -1) {
             return null;
